@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API de Pets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Frontend para API de Pets</h1>
+    <!-- Formulário para listar pets -->
+    <form id="form-listar">
+      <h2>Listar Pets</h2>
+      <button type="submit">Listar Todos os Pets</button>
+    </form>
+    
+    <!-- Formulário para cadastrar pet -->
+    <form id="form-cadastrar">
+        <h2>Cadastrar Pet</h2>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <label for="raca">Raça:</label>
+        <input type="text" id="raca" name="raca" required>
+        <label for="historico">Histórico:</label>
+        <input type="text" id="historico" name="historico">
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" required>
+            <option value="M">M</option>
+            <option value="F">F</option>
+        </select>
+        <button type="submit">Cadastrar</button>
+    </form>
+    
+    <!-- Formulário para atualizar pet -->
+    <form id="form-atualizar">
+      <h2>Atualizar Pet</h2>
+      <label for="id-atualizar">ID do Pet:</label>
+      <input type="number" id="id-atualizar" name="id-atualizar" required>
+      <!-- Campos adicionais para atualização, como nome, raça, etc. -->
+      <label for="novo-nome">Novo Nome:</label>
+      <input type="text" id="novo-nome" name="novo-nome">
+      <label for="nova-raca">Nova Raça:</label>
+      <input type="text" id="nova-raca" name="nova-raca">
+      <!-- Adicione outros campos conforme necessário para atualização -->
+      <button type="submit">Atualizar</button>
+    </form>
+
+    <!-- Formulário para excluir pet -->
+    <form id="form-excluir">
+      <h2>Excluir Pet</h2>
+      <label for="id-excluir">ID do Pet:</label>
+      <input type="number" id="id-excluir" name="id-excluir" required>
+      <button type="submit">Excluir</button>
+    </form>
+
+    <!-- Div para exibir resultados -->
+    <div id="resultado"></div>
+
+    <!-- Botão para limpar a lista -->
+    <button id="limparLista">Limpar Lista</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
